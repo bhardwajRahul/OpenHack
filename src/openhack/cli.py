@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from typing import Sequence
 
+from . import __version__
 from .log import emit
 from .expert_scope import expert_options_text, read_run_expert_scope, scope_summary
 from .paths import run_path
@@ -220,6 +221,11 @@ def _cmd_validate_run(args: argparse.Namespace) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="openhack")
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=f"%(prog)s {__version__}",
+    )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     init = subparsers.add_parser("init-run", help="Create a fresh run.")

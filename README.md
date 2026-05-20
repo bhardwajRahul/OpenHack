@@ -8,6 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/github/v/tag/hadriansecurity/openhack?label=version)](https://github.com/hadriansecurity/openhack/releases)
 
 `openhack` is a set of agents and tools that mimics how the
 Hadrian research team performs automated vulnerability research. The methodology
@@ -104,6 +105,15 @@ openhack summarize-run demo demo-001
 Set `OPENHACK_ROOT` to this workspace path if you invoke the CLI from
 outside the repo root. See [`docs/QUICKSTART.md`](docs/QUICKSTART.md) for more
 detail.
+
+---
+
+## Versioning
+
+OpenHack uses the version in `pyproject.toml` as the package source of truth.
+GitHub releases should be tagged with the same version using the `vX.Y.Z`
+format, such as `v0.1.0`. The installed CLI reports the package version with
+`openhack --version`.
 
 ---
 
