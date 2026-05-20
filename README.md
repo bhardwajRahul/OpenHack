@@ -31,6 +31,12 @@ become final findings. The human approves every phase transition.
 
 ## Quick Start
 
+> [!WARNING]
+> Running OpenHack against an entire codebase with the full expert scope can use
+> a lot of model tokens. For best results, use frontier models. To control token
+> usage, review the generated testing scenarios and run only the ones you want to
+> prioritize.
+
 The easiest way to get started is to open this repository in a coding harness
 such as Codex, Claude Code, or Cursor and ask it:
 
